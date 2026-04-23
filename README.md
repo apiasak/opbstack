@@ -14,7 +14,7 @@
 <p align="center">
   <img src="./assets/logos/claude.svg" alt="Claude Code" height="34" />
   &nbsp;&nbsp;&nbsp;
-  <img src="https://mintcdn.com/paperclip-e9417b58/jZ-7QADG00KyRFJE/logo/light.svg" alt="Paperclip" height="34" />
+  <img src="https://avatars.githubusercontent.com/u/264498616" alt="Paperclip" height="34" />
   &nbsp;&nbsp;&nbsp;
   <img src="./assets/logos/openclaw.svg" alt="OpenClaw" height="34" />
   &nbsp;&nbsp;&nbsp;
