@@ -1,7 +1,7 @@
 # opbstack 🇹🇭
 
 <p align="center">
-  <img src="./assets/opbstack-hero.svg" alt="opbstack hero banner" width="100%" />
+  <img src="./assets/cover/opbstack-cover.png" alt="opbstack hero banner" width="100%" />
 </p>
 
 <p align="center">
