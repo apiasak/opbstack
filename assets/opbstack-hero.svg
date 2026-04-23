@@ -24,7 +24,7 @@
   <circle cx="1260" cy="760" r="260" fill="#F59E0B" fill-opacity="0.1"/>
 
   <rect x="84" y="78" width="210" height="42" rx="21" fill="#FFFFFF" fill-opacity="0.92"/>
-  <text x="108" y="106" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">thaismestack</text>
+  <text x="108" y="106" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">opbstack</text>
 
   <text x="84" y="212" fill="#7C2D12" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700">Thai SME AI Agent Stack</text>
   <text x="84" y="292" fill="#1F2937" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="600">One person business, ten specialist skills, one usable workflow.</text>

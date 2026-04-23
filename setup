@@ -1,15 +1,15 @@
 #!/bin/bash
-# setup — thaismestack installer
+# setup — opbstack installer
 # ติดตั้งอัตโนมัติบน Claude Code, Paperclip, OpenClaw, Hermes, หรือ OpenCode legacy path
 # Usage: ./setup [claude|paperclip|openclaw|hermes|opencode|auto]
 
 set -e
 
-THAISTACK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+OPBSTACK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILLS=(strategist brand build market content data serve admin money coach)
 SKILL_NAMES=("thaistrategist" "thaibrand" "thaibuild" "thaimarket" "thaicontent" "thaidata" "thaiserve" "thaiadmin" "thaimoney" "thaicoach")
 
-echo "☕ thaismestack — Thai SME AI Agent Stack"
+echo "☕ opbstack — Thai SME AI Agent Stack"
 echo "=========================================="
 
 # ─── Detect platform ───
@@ -62,10 +62,10 @@ install_opencode() {
   
   # สร้าง skills symlink
   mkdir -p "$OC_CONFIG/skills"
-  ln -sf "$THAISTACK_DIR" "$OC_CONFIG/skills/thaismestack"
+  ln -sf "$OPBSTACK_DIR" "$OC_CONFIG/skills/opbstack"
   
   # สร้าง opencode.json ตัวอย่าง
-  cat > "$OC_CONFIG/thaismestack-example.json" << EOF
+  cat > "$OC_CONFIG/opbstack-example.json" << EOF
 {
   "\$schema": "https://opencode.ai/config.json",
   "model": "byteplus-plan/ark-code-latest",
@@ -89,22 +89,22 @@ install_opencode() {
     }
   },
   "customCommands": {
-    "strategist": { "description": "นักวางแผนธุรกิจ", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/strategist/SKILL.md and act as a Thai business strategist. Respond in Thai with English in parentheses." },
-    "brand": { "description": "นักออกแบบแบรนด์", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/brand/SKILL.md and act as a Thai brand designer. Respond in Thai with English in parentheses." },
-    "build": { "description": "นักสร้างระบบ", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/build/SKILL.md and act as a Thai web/system builder. Respond in Thai with English in parentheses." },
-    "market": { "description": "นักการตลาด", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/market/SKILL.md and act as a Thai digital marketer. Respond in Thai with English in parentheses." },
-    "content": { "description": "นักเขียนคอนเทนต์", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/content/SKILL.md and act as a Thai content creator. Respond in Thai with English in parentheses." },
-    "data": { "description": "นักวิเคราะห์ข้อมูล", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/data/SKILL.md and act as a Thai data analyst. Respond in Thai with English in parentheses." },
-    "serve": { "description": "นักบริการลูกค้า", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/serve/SKILL.md and act as a Thai customer success manager. Respond in Thai with English in parentheses." },
-    "admin": { "description": "ธุรการ", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/admin/SKILL.md and act as a Thai business admin. Respond in Thai with English in parentheses." },
-    "money": { "description": "นักการเงิน", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/money/SKILL.md and act as a Thai finance manager. Respond in Thai with English in parentheses." },
-    "coach": { "description": "โค้ชธุรกิจ", "prompt": "Read $THAISTACK_DIR/core/CLAUDE.md for rules. Then read $THAISTACK_DIR/coach/SKILL.md and act as a Thai business coach. Respond in Thai with English in parentheses." }
+    "strategist": { "description": "นักวางแผนธุรกิจ", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/strategist/SKILL.md and act as a Thai business strategist. Respond in Thai with English in parentheses." },
+    "brand": { "description": "นักออกแบบแบรนด์", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/brand/SKILL.md and act as a Thai brand designer. Respond in Thai with English in parentheses." },
+    "build": { "description": "นักสร้างระบบ", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/build/SKILL.md and act as a Thai web/system builder. Respond in Thai with English in parentheses." },
+    "market": { "description": "นักการตลาด", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/market/SKILL.md and act as a Thai digital marketer. Respond in Thai with English in parentheses." },
+    "content": { "description": "นักเขียนคอนเทนต์", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/content/SKILL.md and act as a Thai content creator. Respond in Thai with English in parentheses." },
+    "data": { "description": "นักวิเคราะห์ข้อมูล", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/data/SKILL.md and act as a Thai data analyst. Respond in Thai with English in parentheses." },
+    "serve": { "description": "นักบริการลูกค้า", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/serve/SKILL.md and act as a Thai customer success manager. Respond in Thai with English in parentheses." },
+    "admin": { "description": "ธุรการ", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/admin/SKILL.md and act as a Thai business admin. Respond in Thai with English in parentheses." },
+    "money": { "description": "นักการเงิน", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/money/SKILL.md and act as a Thai finance manager. Respond in Thai with English in parentheses." },
+    "coach": { "description": "โค้ชธุรกิจ", "prompt": "Read $OPBSTACK_DIR/core/CLAUDE.md for rules. Then read $OPBSTACK_DIR/coach/SKILL.md and act as a Thai business coach. Respond in Thai with English in parentheses." }
   }
 }
 EOF
   
   echo ""
-  echo "✅ ติดตั้ง thaismestack บน OpenCode สำเร็จ!"
+  echo "✅ ติดตั้ง opbstack บน OpenCode สำเร็จ!"
   echo ""
   echo "📋 ทดสอบด้วย:"
   echo "   opencode"
@@ -114,24 +114,24 @@ EOF
   echo "   https://console.byteplus.com/ → ModelArk → Coding Plan"
   echo ""
   echo "📝 ขั้นตอนต่อไป:"
-  echo "   1. แก้ไข $OC_CONFIG/thaismestack-example.json ใส่ API Key"
+  echo "   1. แก้ไข $OC_CONFIG/opbstack-example.json ใส่ API Key"
   echo "   2. Copy ไปเป็น $OC_CONFIG/opencode.json"
-  echo "   3. กรอก $THAISTACK_DIR/business_context/TEMPLATE.md → BUSINESS.md"
+  echo "   3. กรอก $OPBSTACK_DIR/business_context/TEMPLATE.md → BUSINESS.md"
   echo "   4. รัน opencode แล้วใช้ /strategist /brand /market ..."
 }
 
 # ─── Claude Code ───
 install_claude() {
   CLAUDE_SKILLS="$HOME/.claude/skills"
-  DEST="$CLAUDE_SKILLS/thaismestack"
+  DEST="$CLAUDE_SKILLS/opbstack"
   
   echo "📁 ติดตั้งที่: $DEST"
   mkdir -p "$CLAUDE_SKILLS"
   
   # Copy skills (จริง ๆ ใช้ symlink หรือ copy ก็ได้)
-  if [ "$THAISTACK_DIR" != "$DEST" ]; then
+  if [ "$OPBSTACK_DIR" != "$DEST" ]; then
     rm -rf "$DEST"
-    cp -r "$THAISTACK_DIR" "$DEST"
+    cp -r "$OPBSTACK_DIR" "$DEST"
   fi
   
   # สร้าง CLAUDE.md ใน .claude/ ถ้ายังไม่มี
@@ -139,17 +139,17 @@ install_claude() {
   
   if [ -f "$CLAUDE_MD" ]; then
     echo "📝 พบไฟล์ CLAUDE.md ที่มีอยู่แล้ว"
-    echo "   เพิ่ม thaismestack section..."
+    echo "   เพิ่ม opbstack section..."
     
-    # เช็คว่ามี thaismestack section อยู่แล้วหรือไม่
-    if grep -q "thaismestack" "$CLAUDE_MD" 2>/dev/null; then
-      echo "   ✓ thaismestack ถูกติดตั้งแล้ว"
+    # เช็คว่ามี opbstack section อยู่แล้วหรือไม่
+    if grep -q "opbstack" "$CLAUDE_MD" 2>/dev/null; then
+      echo "   ✓ opbstack ถูกติดตั้งแล้ว"
     else
       cat >> "$CLAUDE_MD" << 'EOF'
 
 ---
 
-## thaismestack — Thai SME AI Agent Stack
+## opbstack — Thai SME AI Agent Stack
 
 คุณมี 10 skills สำหรับธุรกิจ SME ไทย ใช้ได้ด้วยคำสั่ง:
 
@@ -172,13 +172,13 @@ install_claude() {
 - `/coach` — Weekly review SOP เป้าหมาย
 
 **กฎ:**
-- ก่อนตอบทุกครั้ง ให้อ่าน `~/.claude/skills/thaismestack/core/CLAUDE.md` เพื่อเข้าใจกติกาการทำงาน
+- ก่อนตอบทุกครั้ง ให้อ่าน `~/.claude/skills/opbstack/core/CLAUDE.md` เพื่อเข้าใจกติกาการทำงาน
 - ถ้ามี `business_context/BUSINESS.md` ให้อ่านเพื่อเข้าใจบริบทธุรกิจ
 - ถ้ามี `project_context/PROJECT.md` ให้อ่านเพื่อเข้าใจงานปัจจุบัน
 - ตอบเป็นภาษาไทยเป็นหลัก เข้าใจง่าย ให้ตัวอย่างที่ copy ใช้ได้เลย
 - ถามคำถามต่อเพื่อให้คำตอบลึกขึ้น
 EOF
-      echo "   ✓ เพิ่ม thaismestack section เรียบร้อย"
+      echo "   ✓ เพิ่ม opbstack section เรียบร้อย"
     fi
   else
     echo "📝 สร้างไฟล์ CLAUDE.md..."
@@ -186,7 +186,7 @@ EOF
     cat > "$CLAUDE_MD" << 'EOF'
 # CLAUDE.md — คำสั่งและบริบทสำหรับ Claude Code
 
-## thaismestack — Thai SME AI Agent Stack
+## opbstack — Thai SME AI Agent Stack
 
 คุณมี 10 skills สำหรับธุรกิจ SME ไทย ใช้ได้ด้วยคำสั่ง:
 
@@ -209,7 +209,7 @@ EOF
 - `/coach` — Weekly review SOP เป้าหมาย
 
 **กฎ:**
-- ก่อนตอบทุกครั้ง ให้อ่าน `~/.claude/skills/thaismestack/core/CLAUDE.md` เพื่อเข้าใจกติกาการทำงาน
+- ก่อนตอบทุกครั้ง ให้อ่าน `~/.claude/skills/opbstack/core/CLAUDE.md` เพื่อเข้าใจกติกาการทำงาน
 - ถ้ามี `business_context/BUSINESS.md` ให้อ่านเพื่อเข้าใจบริบทธุรกิจ
 - ถ้ามี `project_context/PROJECT.md` ให้อ่านเพื่อเข้าใจงานปัจจุบัน
 - ตอบเป็นภาษาไทยเป็นหลัก เข้าใจง่าย ให้ตัวอย่างที่ copy ใช้ได้เลย
@@ -219,7 +219,7 @@ EOF
   fi
   
   echo ""
-  echo "✅ ติดตั้ง thaismestack บน Claude Code สำเร็จ!"
+  echo "✅ ติดตั้ง opbstack บน Claude Code สำเร็จ!"
   echo ""
   echo "📋 ทดสอบด้วยคำสั่ง:"
   echo "   /strategist วิเคราะห์ธุรกิจร้านกาแฟของฉัน"
@@ -243,7 +243,7 @@ install_paperclip() {
   
   # Copy skills
   for i in "${!SKILLS[@]}"; do
-    src="$THAISTACK_DIR/${SKILLS[$i]}"
+    src="$OPBSTACK_DIR/${SKILLS[$i]}"
     dst="$PC_SKILLS/${SKILL_NAMES[$i]}"
     rm -rf "$dst"
     cp -r "$src" "$dst"
@@ -251,13 +251,13 @@ install_paperclip() {
   done
   
   # Copy context
-  cp -r "$THAISTACK_DIR/core" "$PC_CORE/" 2>/dev/null || true
-  cp -r "$THAISTACK_DIR/business_context" "$PC_CORE/" 2>/dev/null || true
-  cp -r "$THAISTACK_DIR/project_context" "$PC_CORE/" 2>/dev/null || true
+  cp -r "$OPBSTACK_DIR/core" "$PC_CORE/" 2>/dev/null || true
+  cp -r "$OPBSTACK_DIR/business_context" "$PC_CORE/" 2>/dev/null || true
+  cp -r "$OPBSTACK_DIR/project_context" "$PC_CORE/" 2>/dev/null || true
   
   # สร้าง config file ตัวอย่าง
-  cat > "$PC_CORE/thaismestack-example.yaml" << EOF
-# thaismestack-example.yaml — ตัวอย่าง team template สำหรับ Paperclip
+  cat > "$PC_CORE/opbstack-example.yaml" << EOF
+# opbstack-example.yaml — ตัวอย่าง team template สำหรับ Paperclip
 # ใช้เป็นแม่แบบสำหรับตั้งค่า company / agents ใน UI
 # หรืออ้างอิง field names ตอนเรียก API/automation ภายหลัง
 
@@ -327,13 +327,13 @@ agents:
 EOF
   
   echo ""
-  echo "✅ ติดตั้ง thaismestack บน Paperclip สำเร็จ!"
+  echo "✅ ติดตั้ง opbstack บน Paperclip สำเร็จ!"
   echo ""
   echo "📋 ทดสอบด้วย:"
   echo "   ls $PC_SKILLS"
   echo ""
   echo "📝 ขั้นตอนต่อไป:"
-  echo "   1. แก้ไข $PC_CORE/thaismestack-example.yaml ตามธุรกิจของคุณ"
+  echo "   1. แก้ไข $PC_CORE/opbstack-example.yaml ตามธุรกิจของคุณ"
   echo "   2. กรอก $PC_CORE/business_context/TEMPLATE.md → BUSINESS.md"
   echo "   3. รัน: npx paperclipai onboard --yes หรือ pnpm paperclipai run"
   echo "   4. เปิด UI ที่ http://localhost:3100 แล้วสร้าง company / CEO / agents"
@@ -349,28 +349,28 @@ install_openclaw() {
   
   # Copy skills (OpenClaw ใช้ชื่อ skill ตรง ๆ)
   for i in "${!SKILLS[@]}"; do
-    src="$THAISTACK_DIR/${SKILLS[$i]}"
-    dst="$OC_SKILLS/thaismestack-${SKILLS[$i]}"
+    src="$OPBSTACK_DIR/${SKILLS[$i]}"
+    dst="$OC_SKILLS/opbstack-${SKILLS[$i]}"
     rm -rf "$dst"
     cp -r "$src" "$dst"
-    echo "   ✓ thaismestack-${SKILLS[$i]}"
+    echo "   ✓ opbstack-${SKILLS[$i]}"
   done
   
   # Copy context
   mkdir -p "$HOME/.openclaw"
-  cp "$THAISTACK_DIR/core/CLAUDE.md" "$HOME/.openclaw/CLAUDE.md" 2>/dev/null || true
-  cp -r "$THAISTACK_DIR/business_context" "$HOME/.openclaw/" 2>/dev/null || true
-  cp -r "$THAISTACK_DIR/project_context" "$HOME/.openclaw/" 2>/dev/null || true
+  cp "$OPBSTACK_DIR/core/CLAUDE.md" "$HOME/.openclaw/CLAUDE.md" 2>/dev/null || true
+  cp -r "$OPBSTACK_DIR/business_context" "$HOME/.openclaw/" 2>/dev/null || true
+  cp -r "$OPBSTACK_DIR/project_context" "$HOME/.openclaw/" 2>/dev/null || true
   
   echo ""
-  echo "✅ ติดตั้ง thaismestack บน OpenClaw สำเร็จ!"
+  echo "✅ ติดตั้ง opbstack บน OpenClaw สำเร็จ!"
   echo ""
   echo "📋 ทดสอบด้วย:"
   echo "   openclaw skill list"
   echo ""
   echo "📝 ขั้นตอนต่อไป:"
   echo "   1. กรอก ~/.openclaw/business_context/TEMPLATE.md → BUSINESS.md"
-  echo "   2. ใช้ skill: 'thaismestack-strategist วิเคราะห์ธุรกิจของฉัน'"
+  echo "   2. ใช้ skill: 'opbstack-strategist วิเคราะห์ธุรกิจของฉัน'"
 }
 
 # ─── Hermes ───
@@ -382,21 +382,21 @@ install_hermes() {
   
   # Hermes ใช้ SKILL.md ตรง ๆ
   for i in "${!SKILLS[@]}"; do
-    src="$THAISTACK_DIR/${SKILLS[$i]}"
-    dst="$HERMES_SKILLS/thaismestack-${SKILLS[$i]}"
+    src="$OPBSTACK_DIR/${SKILLS[$i]}"
+    dst="$HERMES_SKILLS/opbstack-${SKILLS[$i]}"
     rm -rf "$dst"
     cp -r "$src" "$dst"
-    echo "   ✓ thaismestack-${SKILLS[$i]}"
+    echo "   ✓ opbstack-${SKILLS[$i]}"
   done
   
   # Copy context
   mkdir -p "$HOME/.hermes"
-  cp "$THAISTACK_DIR/core/CLAUDE.md" "$HOME/.hermes/CLAUDE.md" 2>/dev/null || true
-  cp -r "$THAISTACK_DIR/business_context" "$HOME/.hermes/" 2>/dev/null || true
-  cp -r "$THAISTACK_DIR/project_context" "$HOME/.hermes/" 2>/dev/null || true
+  cp "$OPBSTACK_DIR/core/CLAUDE.md" "$HOME/.hermes/CLAUDE.md" 2>/dev/null || true
+  cp -r "$OPBSTACK_DIR/business_context" "$HOME/.hermes/" 2>/dev/null || true
+  cp -r "$OPBSTACK_DIR/project_context" "$HOME/.hermes/" 2>/dev/null || true
   
   echo ""
-  echo "✅ ติดตั้ง thaismestack บน Hermes Agent สำเร็จ!"
+  echo "✅ ติดตั้ง opbstack บน Hermes Agent สำเร็จ!"
   echo ""
   echo "📋 Hermes จะเรียนรู้ skills เหล่านี้และปรับปรุงเองอัตโนมัติ"
   echo ""
@@ -435,6 +435,6 @@ case "$PLATFORM" in
 esac
 
 echo ""
-echo "☕ thaismestack พร้อมใช้งาน!"
+echo "☕ opbstack พร้อมใช้งาน!"
 echo "   10 skills | 4 platforms | 1 คำสั่ง"
 echo ""

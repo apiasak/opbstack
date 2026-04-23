@@ -1,6 +1,6 @@
-# setup-opencode.md — ติดตั้ง thaismestack บน OpenCode + Model Ark (Legacy Path)
+# setup-opencode.md — ติดตั้ง opbstack บน OpenCode + Model Ark (Legacy Path)
 
-> คู่มือนี้เก็บไว้สำหรับคนที่ยังใช้ **OpenCode** อยู่แล้วร่วมกับ **BytePlus ModelArk Coding Plan** และ **thaismestack**
+> คู่มือนี้เก็บไว้สำหรับคนที่ยังใช้ **OpenCode** อยู่แล้วร่วมกับ **BytePlus ModelArk Coding Plan** และ **opbstack**
 >
 > *This guide is kept for existing OpenCode users. As of 2026-04-23, the official OpenCode GitHub repo is archived and points users to Crush for ongoing development.*
 
@@ -17,7 +17,7 @@
 | **สลับ Model** | ไม่ได้ | **ได้กลาง session** (Plan = แพง, Execute = ถูก) |
 | **Open Source** | ปิด | OpenCode เป็น open source แต่ upstream เดิมถูก archive แล้ว |
 | **Local Model** | ไม่ได้ | **Ollama, LM Studio** ได้ |
-| **ใช้กับ thaismestack** | ได้ | **ได้ดีกว่า** (multi-model routing) |
+| **ใช้กับ opbstack** | ได้ | **ได้ดีกว่า** (multi-model routing) |
 
 > 💡 **สรุป**: จุดแข็งของ path นี้คือ model flexibility ไม่ใช่ความถูกแบบเดิมอีกต่อไป เพราะราคา ModelArk ปัจจุบันสูงกว่าข้อมูลรุ่นแรกของ repo นี้
 
@@ -85,7 +85,7 @@
 
 1. ใน ModelArk Console → **API Keys**
 2. คลิก **Create API Key**
-3. ตั้งชื่อ: `thaismestack-opencode`
+3. ตั้งชื่อ: `opbstack-opencode`
 4. Copy API Key เก็บไว้ (จะใช้ในขั้นตอนที่ 3)
 
 ### 1.4 หา Base URL
@@ -216,16 +216,16 @@ API Key: <your-api-key-from-step-1>
 
 ---
 
-## ขั้นตอนที่ 4: โหลด thaismestack Skills เข้า OpenCode
+## ขั้นตอนที่ 4: โหลด opbstack Skills เข้า OpenCode
 
-### 4.1 Clone thaismestack
+### 4.1 Clone opbstack
 
 ```bash
 # Clone repo
-git clone --single-branch --depth 1 https://github.com/apiasak/opbstack.git ~/thaismestack
+git clone --single-branch --depth 1 https://github.com/apiasak/opbstack.git ~/opbstack
 
 # หรือถ้าใช้กับโปรเจคที่มีอยู่
-ln -s ~/thaismestack ~/.config/opencode/skills/thaismestack
+ln -s ~/opbstack ~/.config/opencode/skills/opbstack
 ```
 
 ### 4.2 ตั้งค่า OpenCode ให้รู้จัก Skills
@@ -240,43 +240,43 @@ ln -s ~/thaismestack ~/.config/opencode/skills/thaismestack
   "customCommands": {
     "strategist": {
       "description": "นักวางแผนธุรกิจ - Business strategy and planning",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/strategist/SKILL.md and act as a Thai business strategist. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/strategist/SKILL.md and act as a Thai business strategist. Respond in Thai with English in parentheses."
     },
     "brand": {
       "description": "นักออกแบบแบรนด์ - Brand identity and design",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/brand/SKILL.md and act as a Thai brand designer. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/brand/SKILL.md and act as a Thai brand designer. Respond in Thai with English in parentheses."
     },
     "build": {
       "description": "นักสร้างระบบ - Build websites and systems",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/build/SKILL.md and act as a Thai web/system builder. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/build/SKILL.md and act as a Thai web/system builder. Respond in Thai with English in parentheses."
     },
     "market": {
       "description": "นักการตลาด - Digital marketing strategy",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/market/SKILL.md and act as a Thai digital marketer. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/market/SKILL.md and act as a Thai digital marketer. Respond in Thai with English in parentheses."
     },
     "content": {
       "description": "นักเขียนคอนเทนต์ - Content creation and copywriting",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/content/SKILL.md and act as a Thai content creator. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/content/SKILL.md and act as a Thai content creator. Respond in Thai with English in parentheses."
     },
     "data": {
       "description": "นักวิเคราะห์ข้อมูล - Data analytics and reporting",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/data/SKILL.md and act as a Thai data analyst. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/data/SKILL.md and act as a Thai data analyst. Respond in Thai with English in parentheses."
     },
     "serve": {
       "description": "นักบริการลูกค้า - Customer success and CRM",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/serve/SKILL.md and act as a Thai customer success manager. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/serve/SKILL.md and act as a Thai customer success manager. Respond in Thai with English in parentheses."
     },
     "admin": {
       "description": "ธุรการ - Admin and legal documents",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/admin/SKILL.md and act as a Thai business admin. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/admin/SKILL.md and act as a Thai business admin. Respond in Thai with English in parentheses."
     },
     "money": {
       "description": "นักการเงิน - Finance and accounting",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/money/SKILL.md and act as a Thai finance manager. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/money/SKILL.md and act as a Thai finance manager. Respond in Thai with English in parentheses."
     },
     "coach": {
       "description": "โค้ชธุรกิจ - Business coaching and growth",
-      "prompt": "Read ~/thaismestack/core/CLAUDE.md for rules. Then read ~/thaismestack/coach/SKILL.md and act as a Thai business coach. Respond in Thai with English in parentheses."
+      "prompt": "Read ~/opbstack/core/CLAUDE.md for rules. Then read ~/opbstack/coach/SKILL.md and act as a Thai business coach. Respond in Thai with English in parentheses."
     }
   }
 }
@@ -410,10 +410,10 @@ ollama pull qwen2.5-coder:7b
 
 ```bash
 # ใน OpenCode TUI
-cat ~/thaismestack/business_context/TEMPLATE.md
+cat ~/opbstack/business_context/TEMPLATE.md
 
 # แล้วกรอกข้อมูล บันทึกเป็น
-~/thaismestack/business_context/BUSINESS.md
+~/opbstack/business_context/BUSINESS.md
 ```
 
 ### 7.2 บอก OpenCode ให้อ่าน Context ก่อนตอบ
@@ -422,7 +422,7 @@ cat ~/thaismestack/business_context/TEMPLATE.md
 
 ```json
 {
-  "systemPrompt": "Before every response, read ~/thaismestack/core/CLAUDE.md for rules. If ~/thaismestack/business_context/BUSINESS.md exists, read it to understand the business context. If ~/thaismestack/project_context/PROJECT.md exists, read it to understand current project. Respond in Thai primarily with English in parentheses."
+  "systemPrompt": "Before every response, read ~/opbstack/core/CLAUDE.md for rules. If ~/opbstack/business_context/BUSINESS.md exists, read it to understand the business context. If ~/opbstack/project_context/PROJECT.md exists, read it to understand current project. Respond in Thai primarily with English in parentheses."
 }
 ```
 
@@ -439,9 +439,9 @@ opencode -c /path/to/project
 /models              # เลือก model
 /providers           # ดู providers
 /connect             # เชื่อมต่อ provider ใหม่
-/strategist ...      # ใช้ thaismestack skill
-/brand ...           # ใช้ thaismestack skill
-/market ...          # ใช้ thaismestack skill
+/strategist ...      # ใช้ opbstack skill
+/brand ...           # ใช้ opbstack skill
+/market ...          # ใช้ opbstack skill
 
 # ─── สลับ Model (กลาง session) ───
 /models byteplus-plan/dola-seed-2.0-lite   # เร็ว ถูก
@@ -466,7 +466,7 @@ opencode -c /path/to/project
 |---|---|
 | **BytePlus Model Ark Coding Plan (Lite)** | **$10 (~360 บาท)** |
 | **OpenCode** | **ฟรี (Open Source)** |
-| **thaismestack** | **ฟรี (Open Source)** |
+| **opbstack** | **ฟรี (Open Source)** |
 | **Ollama (Local)** | **ฟรี (ใช้เครื่องตัวเอง)** |
 | **รวม (เริ่มต้น)** | **$10/เดือน** |
 
@@ -520,4 +520,4 @@ curl https://ark.ap-southeast.bytepluses.com/api/coding/v3/models \
 > - Crush GitHub: https://github.com/charmbracelet/crush
 > - BytePlus ModelArk: https://docs.byteplus.com/en/docs/ModelArk
 > - ModelArk Coding Plan Event: https://www.byteplus.com/en/event/coding-plan
-> - thaismestack: ดู `GUIDE.md` และ `AGENTS.md`
+> - opbstack: ดู `GUIDE.md` และ `AGENTS.md`

@@ -1,6 +1,6 @@
 # AGENTS.md — คู่มือการใช้งาน AI Agents (Agent Handbook)
 
-> ไฟล์นี้บอกว่า thaismestack มี skill อะไรบ้าง เรียกใช้ยังไง และ skill ต่าง ๆ ทำงานร่วมกันยังไง  
+> ไฟล์นี้บอกว่า opbstack มี skill อะไรบ้าง เรียกใช้ยังไง และ skill ต่าง ๆ ทำงานร่วมกันยังไง  
 > *This file indexes all skills, how to invoke them, and how they work together.*
 
 ---

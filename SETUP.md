@@ -1,6 +1,6 @@
-# วิธีติดตั้ง thaismestack (Setup Guide)
+# วิธีติดตั้ง opbstack (Setup Guide)
 
-> **โปรเจกต์**: thaismestack — Thai SME One Person Business AI Agent Stack  
+> **โปรเจกต์**: opbstack — Thai SME One Person Business AI Agent Stack  
 > **ผู้สร้าง**: Apipoj Piasak | [data-espresso.com/apipoj](https://data-espresso.com/apipoj)  
 > **เวลาที่ใช้**: 5-15 นาที  
 > **ระดับความยาก**: ง่าย (ไม่ต้องเขียนโค้ด)  
@@ -143,7 +143,7 @@ ChatGPT เหมาะกับคนที่ใช้อยู่แล้ว
 ```
 1. คลิก "Explore GPTs" ใน sidebar
 2. คลิก "Create a GPT"
-3. ตั้งชื่อ: "thaismestack - Strategist"
+3. ตั้งชื่อ: "opbstack - Strategist"
 4. ใส่คำอธิบาย: "นักวางแผนธุรกิจสำหรับผู้ประกอบการไทย"
 5. ใส่ Instructions (คำสั่ง) — ดูจากไฟล์ strategist/SKILL.md
 6. คลิก "Save" → เลือก "Only me" (หรือ "Anyone with a link")
@@ -155,7 +155,7 @@ ChatGPT เหมาะกับคนที่ใช้อยู่แล้ว
 ```
 1. เปิด ChatGPT
 2. คลิกชื่อ Custom GPT ที่ต้องการใน sidebar
-   (เช่น "thaismestack - Strategist")
+   (เช่น "opbstack - Strategist")
 3. พิมพ์คำสั่งได้เลย
 4. ถ้าอยากเปลี่ยน Skill → คลิก Custom GPT อื่น
 ```

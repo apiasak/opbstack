@@ -1,6 +1,6 @@
-# thaismestack — รายการ Skill ทั้งหมด (Agent Index)
+# opbstack — รายการ Skill ทั้งหมด (Agent Index)
 
-> **โปรเจกต์**: thaismestack — Thai SME One Person Business AI Agent Stack  
+> **โปรเจกต์**: opbstack — Thai SME One Person Business AI Agent Stack  
 > **ผู้สร้าง**: Apipoj Piasak | [data-espresso.com/apipoj](https://data-espresso.com/apipoj)  
 > **รูปแบบ**: 10 Skills สำหรับผู้ประกอบการไทย One Person Business เรียกใช้งานผ่าน `/command`  
 
