@@ -1,4 +1,4 @@
-# thaismestack 🇹🇭
+# opbstack 🇹🇭
 
 <p align="center">
   <img src="./assets/opbstack-hero.svg" alt="opbstack hero banner" width="100%" />
@@ -11,11 +11,33 @@
   <img src="https://img.shields.io/badge/skills-10-f59e0b.svg" alt="10 skills">
 </p>
 
+<p align="center">
+  <img src="./assets/logos/claude.svg" alt="Claude Code" height="34" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://mintcdn.com/paperclip-e9417b58/jZ-7QADG00KyRFJE/logo/light.svg" alt="Paperclip" height="34" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/logos/openclaw.svg" alt="OpenClaw" height="34" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/logos/hermes-agent.png" alt="Hermes Agent" height="34" />
+</p>
+
+<p align="center">
+  <strong>Claude Code</strong>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <strong>Paperclip</strong>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <strong>OpenClaw</strong>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <strong>Hermes Agent</strong>
+</p>
+
 > **Your one-person business dream team, packaged as 10 AI skills**
 >
 > *ทีมงานในฝันสำหรับธุรกิจคนเดียวของคุณ — ขับเคลื่อนด้วย AI*
 
-thaismestack คือชุด prompt + workflow + business context structure สำหรับผู้ประกอบการไทยที่อยากใช้ AI เป็นทีมงานจริง ไม่ใช่แค่ถามตอบเป็นครั้ง ๆ
+`opbstack` คือ public repo ของชุด prompt + workflow + business context structure สำหรับผู้ประกอบการไทยที่อยากใช้ AI เป็นทีมงานจริง ไม่ใช่แค่ถามตอบเป็นครั้ง ๆ
+
+ภายใน repo นี้เนื้อหาแกนหลักยังใช้ชื่อแนวคิดเดิมว่า `thaismestack` สำหรับ 10 role-based skills
 
 ใช้ได้กับ:
 - `Claude Code` สำหรับงานตรง ๆ ใน repo/workspace
@@ -144,7 +166,7 @@ Idea -> Strategist -> Brand -> Build -> Market -> Content -> Data -> Serve -> Ad
 curl -fsSL https://opencode.ai/install | bash
 
 # ติดตั้ง thaismestack
-git clone --single-branch --depth 1 https://github.com/apiasak/thaismestack.git ~/thaismestack && cd ~/thaismestack && ./setup opencode
+git clone --single-branch --depth 1 https://github.com/apiasak/opbstack.git ~/thaismestack && cd ~/thaismestack && ./setup opencode
 ```
 
 ### ขั้นตอนที่ 2: ตั้งค่า Model Ark (multi-model)

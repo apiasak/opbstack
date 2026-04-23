@@ -222,7 +222,7 @@ API Key: <your-api-key-from-step-1>
 
 ```bash
 # Clone repo
-git clone --single-branch --depth 1 https://github.com/apiasak/thaismestack.git ~/thaismestack
+git clone --single-branch --depth 1 https://github.com/apiasak/opbstack.git ~/thaismestack
 
 # หรือถ้าใช้กับโปรเจคที่มีอยู่
 ln -s ~/thaismestack ~/.config/opencode/skills/thaismestack

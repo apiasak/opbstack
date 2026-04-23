@@ -110,7 +110,7 @@ Advanced setup
 
 ```bash
 # Clone repo (หรือ copy จากที่คุณ download มา)
-git clone https://github.com/apiasak/thaismestack.git
+git clone https://github.com/apiasak/opbstack.git thaismestack
 cd thaismestack
 
 # ดูโครงสร้างที่มี
