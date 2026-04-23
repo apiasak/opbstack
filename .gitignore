@@ -1,0 +1,47 @@
+# ============================================================
+# thaismestack — .gitignore
+# คลุมดวงทั้งระบบปฏิบัติการ, เอดิเตอร์, ไฟล์ชั่วคราว
+# ============================================================
+
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Editor / IDE ---
+*.swp
+*.swo
+*.swn
+*~
+.idea/
+.vscode/
+*.iml
+*.code-workspace
+
+# --- Temporary / Cache ---
+*.tmp
+*.log
+*.bak
+*.cache
+*.pid
+*.seed
+
+# --- Node.js (ถ้ามี) ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+
+# --- Environment / Config ---
+.env
+.env.local
+.env.*.local
+.omx/
+
+# --- Build / Output ---
+dist/
+build/
+out/
+*.tar.gz
+*.zip

@@ -1,0 +1,84 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="180" y1="100" x2="1440" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="0.52" stop-color="#FFF1E6"/>
+      <stop offset="1" stop-color="#F3E8D7"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="340" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF8F1"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#C2410C"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <filter id="shadow" x="-40" y="-40" width="420" height="230" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#7C2D12" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1380" cy="150" r="180" fill="#FDBA74" fill-opacity="0.25"/>
+  <circle cx="220" cy="760" r="220" fill="#14B8A6" fill-opacity="0.12"/>
+  <circle cx="1260" cy="760" r="260" fill="#F59E0B" fill-opacity="0.1"/>
+
+  <rect x="84" y="78" width="210" height="42" rx="21" fill="#FFFFFF" fill-opacity="0.92"/>
+  <text x="108" y="106" fill="#9A3412" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">thaismestack</text>
+
+  <text x="84" y="212" fill="#7C2D12" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700">Thai SME AI Agent Stack</text>
+  <text x="84" y="292" fill="#1F2937" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="600">One person business, ten specialist skills, one usable workflow.</text>
+  <text x="84" y="346" fill="#4B5563" font-family="Arial, Helvetica, sans-serif" font-size="28">Built for Thai founders who need strategy, brand, web, marketing, content,</text>
+  <text x="84" y="386" fill="#4B5563" font-family="Arial, Helvetica, sans-serif" font-size="28">operations, finance, and growth support without building a full team.</text>
+
+  <rect x="84" y="438" width="258" height="62" rx="31" fill="#111827"/>
+  <text x="126" y="478" fill="#FFF7ED" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">/strategist  /brand</text>
+  <rect x="360" y="438" width="286" height="62" rx="31" fill="#FFFFFF" stroke="#D6D3D1" stroke-width="2"/>
+  <text x="400" y="478" fill="#374151" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Claude • Paperclip • OpenClaw</text>
+
+  <g filter="url(#shadow)">
+    <rect x="920" y="136" width="300" height="128" rx="28" fill="url(#card)"/>
+    <rect x="944" y="160" width="52" height="52" rx="16" fill="#FEF3C7"/>
+    <text x="958" y="194" fill="#92400E" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">1</text>
+    <text x="1016" y="188" fill="#111827" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Strategist</text>
+    <text x="1016" y="224" fill="#6B7280" font-family="Arial, Helvetica, sans-serif" font-size="22">Market, positioning, SWOT</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1240" y="236" width="276" height="128" rx="28" fill="url(#card)"/>
+    <rect x="1264" y="260" width="52" height="52" rx="16" fill="#FDE68A"/>
+    <text x="1278" y="294" fill="#92400E" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">2</text>
+    <text x="1336" y="288" fill="#111827" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Brand</text>
+    <text x="1336" y="324" fill="#6B7280" font-family="Arial, Helvetica, sans-serif" font-size="22">Identity, tone, story</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="980" y="392" width="292" height="128" rx="28" fill="url(#card)"/>
+    <rect x="1004" y="416" width="52" height="52" rx="16" fill="#BFDBFE"/>
+    <text x="1018" y="450" fill="#1D4ED8" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">3</text>
+    <text x="1076" y="444" fill="#111827" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Build</text>
+    <text x="1076" y="480" fill="#6B7280" font-family="Arial, Helvetica, sans-serif" font-size="22">Landing page, systems, ops</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1276" y="548" width="240" height="128" rx="28" fill="url(#card)"/>
+    <rect x="1300" y="572" width="52" height="52" rx="16" fill="#A7F3D0"/>
+    <text x="1314" y="606" fill="#047857" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">4</text>
+    <text x="1372" y="600" fill="#111827" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Market</text>
+    <text x="1372" y="636" fill="#6B7280" font-family="Arial, Helvetica, sans-serif" font-size="22">Acquire demand</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="916" y="612" width="332" height="150" rx="30" fill="url(#accent)"/>
+    <text x="956" y="664" fill="#FFFBEB" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">10 AI skills</text>
+    <text x="956" y="708" fill="#FFFBEB" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">from idea to growth</text>
+    <text x="956" y="744" fill="#FEF3C7" font-family="Arial, Helvetica, sans-serif" font-size="22">Designed for Thai SME and solo founders</text>
+  </g>
+
+  <path d="M870 198C902 198 920 198 920 198" stroke="#C2410C" stroke-width="8" stroke-linecap="round" stroke-dasharray="12 14"/>
+  <path d="M1224 300C1252 300 1240 300 1240 300" stroke="#C2410C" stroke-width="8" stroke-linecap="round" stroke-dasharray="12 14"/>
+  <path d="M1378 368C1378 412 1272 456 1272 456" stroke="#C2410C" stroke-width="8" stroke-linecap="round" stroke-dasharray="12 14"/>
+  <path d="M1272 520C1308 548 1312 548 1312 548" stroke="#C2410C" stroke-width="8" stroke-linecap="round" stroke-dasharray="12 14"/>
+
+  <text x="84" y="820" fill="#6B7280" font-family="Arial, Helvetica, sans-serif" font-size="22">/strategist  /brand  /build  /market  /content  /data  /serve  /admin  /money  /coach</text>
+</svg>
